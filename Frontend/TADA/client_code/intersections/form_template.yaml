@@ -1,0 +1,94 @@
+container:
+  type: ColumnPanel
+  event_bindings: {show: form_show}
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: never, col_spacing: medium, spacing_above: small, col_widths: '', spacing_below: small,
+    background: ''}
+components:
+- type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{}', spacing_below: none,
+    background: ''}
+  name: column_panel_1
+  layout_properties:
+    col_widths: {}
+    grid_position: ODOKZJ,JPHMQN
+  components:
+  - type: ColumnPanel
+    properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
+    name: card_7
+    layout_properties: {grid_position: 'VBSHUS,SBTIWG'}
+    components:
+    - name: from_junction
+      properties:
+        role: null
+        align: full
+        tooltip: ''
+        placeholder: From
+        border: ''
+        enabled: true
+        foreground: ''
+        items: []
+        visible: true
+        font_size: null
+        font: ''
+        spacing_above: small
+        spacing_below: small
+        italic: false
+        background: ''
+        bold: true
+        underline: false
+        include_placeholder: true
+      type: DropDown
+      layout_properties: {grid_position: 'VHVPRU,MYPXYL'}
+      event_bindings: {change: from_junction_dropdown_change}
+    - name: to_junction
+      properties:
+        role: null
+        align: full
+        tooltip: ''
+        placeholder: To
+        border: ''
+        enabled: true
+        foreground: ''
+        items: []
+        visible: true
+        font_size: null
+        font: ''
+        spacing_above: small
+        spacing_below: small
+        italic: false
+        background: ''
+        bold: true
+        underline: false
+        include_placeholder: true
+      type: DropDown
+      layout_properties: {grid_position: 'VHVPRU,GNXEMF'}
+      data_bindings: []
+      event_bindings: {change: to_junction_change}
+    - name: date_picker_1
+      properties: {pick_time: true, placeholder: Click to select date and time, max_date: '2024-02-29',
+        min_date: '2021-06-01', enabled: true, bold: true, align: left}
+      type: DatePicker
+      layout_properties: {grid_position: 'VHVPRU,YKGIHN'}
+      data_bindings: []
+    - name: button_1
+      properties:
+        text: Go
+        role: [filled]
+        foreground: ''
+        background: ''
+        align: full
+      type: Button
+      layout_properties: {grid_position: 'VHVPRU,AGIISD'}
+      event_bindings: {click: go_click}
+    - name: spacer_1
+      properties: {height: 752, spacing_below: small, spacing_above: small}
+      type: Spacer
+      layout_properties: {grid_position: 'ETXTCA,OKQFJQ', full_width_row: false}
+is_package: true
+custom_component: false
+properties:
+- {name: prop, type: string, default_value: '', important: true, default_binding_prop: true}

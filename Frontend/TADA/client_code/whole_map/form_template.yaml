@@ -1,0 +1,51 @@
+container:
+  type: ColumnPanel
+  event_bindings: {show: form_show}
+  properties: {col_widths: '{}'}
+components:
+- type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{}', spacing_below: none,
+    background: ''}
+  name: column_panel_1
+  layout_properties:
+    col_widths: {}
+    grid_position: ODOKZJ,JPHMQN
+  components:
+  - type: ColumnPanel
+    properties: {role: card, col_widths: '{}'}
+    name: card_7
+    layout_properties: {grid_position: 'VBSHUS,ITBTPJ'}
+    components:
+    - name: spacer_2
+      properties: {height: 32}
+      type: Spacer
+      layout_properties: {grid_position: 'VHVPRU,IDNBBK'}
+    - name: spacer_3
+      properties: {height: 32}
+      type: Spacer
+      layout_properties: {grid_position: 'VHVPRU,QYKXSN'}
+    - name: date_picker_1
+      properties: {role: null, align: left, max_date: '2024-02-29', pick_time: true,
+        tooltip: '', placeholder: Click to select date and time, border: '', enabled: true,
+        foreground: '', visible: true, font_size: null, font: '', spacing_above: small,
+        spacing_below: small, italic: false, date: '', min_date: '2021-06-01', background: '',
+        bold: true, underline: false, format: ''}
+      type: DatePicker
+      layout_properties: {grid_position: 'VHVPRU,YKGIHN'}
+      event_bindings: {}
+    - name: button_1
+      properties:
+        text: Go
+        role: [filled]
+        foreground: ''
+        background: ''
+        align: full
+      type: Button
+      layout_properties: {grid_position: 'VHVPRU,AGIISD'}
+      event_bindings: {click: go_click}
+    - type: Spacer
+      properties: {height: '752'}
+      name: spacer_1
+      layout_properties: {grid_position: 'JUDOOL,BEPSIB'}
+is_package: true

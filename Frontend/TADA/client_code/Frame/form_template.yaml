@@ -1,0 +1,61 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
+    role: null, html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
+  name: column_panel_2
+  layout_properties: {slot: left-nav}
+  components:
+  - type: Spacer
+    properties: {height: 32}
+    name: spacer_1
+    layout_properties: {grid_position: 'LLNAAG,BRSXTM', row_background: ''}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: ' Darmstadt', font_size: 18, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: 'fa:map'}
+    name: whole_map
+    layout_properties: {grid_position: 'ATKKKJ,DBSYGY'}
+    event_bindings: {click: whole_map_click}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: INTERSECTIONS, font_size: 18, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: 'fa:map-marker'}
+    name: intersections
+    layout_properties: {grid_position: 'AODCYE,XQMJOX'}
+    event_bindings: {click: intersections_click}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '                                                                                 ',
+      font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: ''}
+    name: label_1
+    layout_properties: {grid_position: 'KHSNGK,VNCASN'}
+  - name: spacer_2
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'MVUTYY,MXADSO'}
+  - name: image_2
+    properties: {source: _/theme/legend.jpeg, height: 271, vertical_align: bottom,
+      spacing_above: large, spacing_below: none}
+    type: Image
+    layout_properties: {grid_position: 'XSJYTR,LIDAJM'}
+- type: Image
+  properties: {role: null, vertical_align: center, height: 111, tooltip: '', border: '',
+    foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
+    source: _/theme/Logo1.png, spacing_below: small, background: '', horizontal_align: center}
+  name: image_1
+  layout_properties: {slot: logo}
+- type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '', spacing_below: small,
+    background: ''}
+  name: content_panel
+  layout_properties: {slot: default}
